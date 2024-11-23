@@ -1,0 +1,133 @@
+---
+import Drawer from "./Drawer/Drawer.astro";
+import Brand from "../BrandHeader.astro";
+---
+
+<Drawer />
+<nav
+  class="nav fixed start-0 top-0 z-30 w-full border-gray-200 bg-black backdrop-blur-md transition-all duration-300 ease-in-out"
+>
+  <div
+    class="mx-auto my-4 flex max-w-screen-xl flex-wrap items-center justify-between p-2 px-6"
+  >
+    <div class="lg:order-1 lg:flex lg:w-auto">
+      <Brand />
+    </div>
+    <div
+      class="ml-4 mr-4 hidden w-full grow items-center justify-end lg:order-2 lg:flex lg:w-auto"
+    >
+      <ul
+        class="mx-2 mt-4 flex flex-col rounded-lg border p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:border-0 md:p-0"
+      >
+        <li>
+          <a
+            href="#about"
+            class="header block rounded px-3 py-2 text-2xl font-light text-white hover:text-primary-400 aria-[current=page]:text-pink-400 md:p-0"
+          >
+            About
+          </a>
+        </li>
+        <li>
+          <a
+            href="#services"
+            class="header block rounded px-3 py-2 text-2xl font-light text-white hover:text-primary-400 aria-[current=page]:text-pink-400 md:p-0"
+          >
+            Our Services
+          </a>
+        </li>
+        <li>
+          <a
+            href="#samples"
+            class="header block rounded px-3 py-2 text-2xl font-light text-white hover:text-primary-400 aria-[current=page]:text-pink-400 md:p-0"
+          >
+            Samples
+          </a>
+        </li>
+        <li>
+          <a
+            href="#actors"
+            class="header block rounded px-3 py-2 text-2xl font-light text-white hover:text-primary-400 aria-[current=page]:text-pink-400 md:p-0"
+          >
+            Notches
+          </a>
+        </li>
+        <li>
+          <a
+            href="#contact"
+            class="header block rounded px-3 py-2 text-2xl font-light text-white hover:text-primary-400 aria-[current=page]:text-pink-400 md:p-0"
+          >
+            Contact Us
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="space-x flex lg:order-3">
+      <button
+        type="button"
+        class="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-primary-400 hover:text-primary-500 lg:hidden"
+        data-drawer-target="drawer-navigation-right"
+        data-drawer-show="drawer-navigation-right"
+        aria-controls="drawer-navigation-right"
+        data-drawer-placement="right"
+      >
+        <span class="sr-only">Open main menu</span>
+        <svg
+          class="h-5 w-5"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 17 14"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M1 1h15M1 7h15M1 13h15"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<script is:inline>
+  window.addEventListener("scroll", (e) => {
+    const nav = document.querySelector(".nav");
+    if (window.scrollY) {
+      nav?.classList.add("shadow", "bg-opacity-70", "dark:bg-opacity-90");
+    } else {
+      nav?.classList.remove("shadow", "bg-opacity-70", "dark:bg-opacity-90");
+    }
+  });
+
+  let lastScrollY = window.scrollY;
+  const nav = document.querySelector("nav");
+
+  window.addEventListener("scroll", () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY && currentScrollY > 100) {
+      nav.classList.add("-translate-y-full");
+    } else if (currentScrollY < lastScrollY) {
+      nav.classList.remove("-translate-y-full");
+    }
+
+    lastScrollY = currentScrollY;
+  });
+</script>
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const navLinks = document.querySelectorAll(".header");
+
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        // Remove 'aria-current' from all links
+        navLinks.forEach((nav) => nav.removeAttribute("aria-current"));
+
+        // Add 'aria-current' to the clicked link
+        link.setAttribute("aria-current", "page");
+      });
+    });
+  });
+</script>

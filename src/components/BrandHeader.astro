@@ -1,0 +1,23 @@
+---
+import { Icon } from "astro-icon/components";
+import { brand } from "../common/companyItems";
+---
+
+<a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+  <!-- <img
+    src="../../logo-outline.png"
+    class="w-16"
+    width="64px"
+    height="64px"
+    alt="brand logo"
+  /> -->
+
+  <span
+    class="logo neonTextStatic hidden self-center whitespace-nowrap text-4xl font-semibold text-primary-600 sm:block"
+    >{brand.company.name}</span
+  >
+  <span
+    class="logo neonTextStatic self-center whitespace-nowrap text-3xl font-semibold text-primary-600 sm:hidden"
+    >{brand.company.abbreviation}</span
+  >
+</a>

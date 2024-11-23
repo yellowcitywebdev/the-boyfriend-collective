@@ -1,0 +1,85 @@
+---
+import { Icon } from "astro-icon/components";
+import { navigationItems as navItems } from "../navigationItems";
+---
+
+<div
+  id="drawer-navigation-right"
+  class="fixed right-0 top-0 z-50 h-screen w-72 translate-x-full overflow-y-auto bg-black p-0 transition-transform"
+  tabindex="-1"
+  aria-labelledby="drawer-navigation-label"
+>
+  <h5
+    id="drawer-navigation-label"
+    class="header w-full bg-black p-6 py-6 text-3xl font-semibold lowercase text-primary-400"
+  >
+    TBC
+  </h5>
+  <button
+    type="button"
+    data-drawer-hide="drawer-navigation-right"
+    aria-controls="drawer-navigation-right"
+    class="absolute end-3 top-7 inline-flex h-8 w-8 items-center justify-center rounded-lg bg-transparent text-sm text-primary-400 hover:bg-primary-400 hover:text-white"
+  >
+    <svg
+      class="h-3 w-3"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 14 14"
+    >
+      <path
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"></path>
+    </svg>
+    <span class="sr-only">Close menu</span>
+  </button>
+
+  <div class="overflow-y-auto p-4 py-4">
+    <ul class="space-y-2 font-medium">
+      <li>
+        <a
+          href="#about"
+          class="header block rounded px-3 py-2 text-2xl font-light text-white hover:text-primary-400 aria-[current=page]:text-pink-400 md:p-0"
+        >
+          About
+        </a>
+      </li>
+      <li>
+        <a
+          href="#services"
+          class="header block rounded px-3 py-2 text-2xl font-light text-white hover:text-primary-400 aria-[current=page]:text-pink-400 md:p-0"
+        >
+          Our Services
+        </a>
+      </li>
+      <li>
+        <a
+          href="#samples"
+          class="header block rounded px-3 py-2 text-2xl font-light text-white hover:text-primary-400 aria-[current=page]:text-pink-400 md:p-0"
+        >
+          Samples
+        </a>
+      </li>
+      <li>
+        <a
+          href="#actors"
+          class="header block rounded px-3 py-2 text-2xl font-light text-white hover:text-primary-400 aria-[current=page]:text-pink-400 md:p-0"
+        >
+          Notches
+        </a>
+      </li>
+      <li>
+        <a
+          href="#contact"
+          class="header block rounded px-3 py-2 text-2xl font-light text-white hover:text-primary-400 aria-[current=page]:text-pink-400 md:p-0"
+        >
+          Contact Us
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
