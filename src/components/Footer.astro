@@ -1,37 +1,6 @@
 ---
 import Brand from "./BrandFooter.astro";
 const today = new Date();
-
-const footerLinks = [
-  {
-    title: "Information",
-    children: [
-      { title: "Home", path: "#home" },
-      { title: "About Us", path: "#about" },
-      { title: "Services", path: "#services" },
-      { title: "Gallery", path: "#gallery" },
-      { title: "Reviews", path: "#reviews" },
-      { title: "Contact", path: "#contact" },
-    ],
-  },
-  {
-    title: "Services",
-    children: [
-      { title: "Service 1", path: "" },
-      { title: "Service 2", path: "" },
-      { title: "Service 3", path: "" },
-      { title: "Service 4", path: "" },
-    ],
-  },
-  {
-    title: "Contact",
-    children: [
-      { title: "1234 Main St\nSomewhere, TX 78910", path: "" },
-      { title: "(555) 555-5555", path: "" },
-      { title: "company.name@email.com", path: "" },
-    ],
-  },
-];
 ---
 
 <style>
@@ -40,7 +9,7 @@ const footerLinks = [
   }
 </style>
 
-<div class="-mb-1 text-primary-500 dark:text-gray-700">
+<div class="-mb-1 text-primary-600">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
     <path
       fill="currentColor"
@@ -51,70 +20,28 @@ const footerLinks = [
   </svg>
 </div>
 
-<footer class="bg-primary-500 shadow dark:bg-gray-700">
+<footer class="bg-primary-600 shadow">
   <div class="mx-auto w-full max-w-screen-xl px-4 pb-8 pt-12 lg:pt-24">
-    <div class="pb-8 md:justify-between lg:flex">
-      <div class="mb-6 md:mb-12">
-        <Brand />
-      </div>
-      <div
-        class="mx-12 grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-6 md:grid-cols-3 lg:mx-0"
-      >
-        {
-          footerLinks.map((item) => (
-            <>
-              <div>
-                {/* <h2 class="mb-6 text-sm font-bold uppercase text-gray-100">
-                  {item.title}
-                  <hr class="mt-2 border-t-2 border-primary-500 " />
-                </h2> */}
-                <h2 class="mb-6 w-1/2 text-sm font-bold uppercase text-primary-100">
-                  {item.title}
-                  <hr class="mt-2 w-full border-t-2 border-red-300 dark:border-primary-500" />
-                </h2>
-
-                {/* conditional that makes a link if path is not empty */}
-                <ul class="font-normal text-gray-100 dark:text-gray-400">
-                  {item.children.map((child) => (
-                    <li class="mb-4">
-                      {child.path ? (
-                        <a
-                          href={child.path}
-                          class="address text-white hover:text-primary-400 hover:underline"
-                        >
-                          {child.title}
-                        </a>
-                      ) : (
-                        <span class="address text-white">{child.title}</span>
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </>
-          ))
-        }
-      </div>
+    <div class="md:justify-between lg:flex">
+      <Brand />
     </div>
-    <hr
-      class="my-6 border-t-2 border-red-300 dark:border-primary-500 sm:mx-auto lg:my-8"
-    />
+    <hr class="border-t-1 my-6 border-white sm:mx-auto lg:my-8" />
     <!-- info  -->
     <div class="sm:flex sm:items-center sm:justify-between">
       <div>
-        <span class="text-sm text-gray-300 dark:text-gray-400 sm:text-center"
+        <span class="text-sm text-white sm:text-center"
           >&copy; {today.getFullYear()}
           <a
             href="/"
-            class="text-primary-300 hover:text-primary-300 hover:underline"
-            >Company Name™</a
+            class="text-primary-200 hover:text-primary-200 hover:underline"
+            >The Boyfriend Collective™</a
           >. All Rights Reserved.
         </span>
-        <span class="text-sm text-gray-300 dark:text-gray-400 sm:text-center">
+        <span class="text-sm text-white sm:text-center">
           Site designe by
           <a
             href="/"
-            class="text-primary-300 hover:text-primary-300 hover:underline"
+            class="text-primary-200 hover:text-primary-200 hover:underline"
             >yellowcityweb.dev</a
           >.
         </span>
@@ -122,10 +49,7 @@ const footerLinks = [
 
       <!-- social svgs -->
       <div class="mt-4 flex sm:mt-0 sm:justify-center">
-        <a
-          href="#"
-          class="text-primary-300 hover:text-gray-900 dark:hover:text-white"
-        >
+        <a href="#" class="ms-5 text-primary-300 hover:text-gray-300">
           <svg
             class="h-4 w-4 fill-current hover:text-gray-300"
             aria-hidden="true"
@@ -140,10 +64,7 @@ const footerLinks = [
           </svg>
           <span class="sr-only">Facebook page</span>
         </a>
-        <a
-          href="#"
-          class="ms-5 text-primary-300 hover:text-gray-900 dark:hover:text-white"
-        >
+        <a href="#" class="ms-5 text-primary-300 hover:text-gray-300">
           <svg
             class="h-4 w-4 fill-current hover:text-gray-300"
             aria-hidden="true"
@@ -161,10 +82,7 @@ const footerLinks = [
           </svg>
           <span class="sr-only">Instagram page</span>
         </a>
-        <a
-          href="#"
-          class="ms-5 text-primary-300 hover:text-gray-900 dark:hover:text-white"
-        >
+        <a href="#" class="ms-5 text-primary-300 hover:text-gray-900">
           <svg
             class="h-4 w-4 fill-current hover:text-gray-300"
             aria-hidden="true"
@@ -179,10 +97,7 @@ const footerLinks = [
           </svg>
           <span class="sr-only">Twitter page</span>
         </a>
-        <a
-          href="#"
-          class="ms-5 text-primary-300 hover:text-gray-900 dark:hover:text-white"
-        >
+        <a href="#" class="ms-5 text-primary-300 hover:text-gray-300">
           <svg
             class="h-4 w-4 fill-current hover:text-gray-300"
             aria-hidden="true"
