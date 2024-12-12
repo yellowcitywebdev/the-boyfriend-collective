@@ -1,8 +1,8 @@
 ---
 import { Image } from "astro:assets";
-import vaNameOne from "../../public/about-image-2.webp";
-import vaNameTwo from "../../public/about-image-2.webp";
-import vaNameThree from "../../public/about-image-2.webp";
+import scriptOne from "../../public/notches-placeholder.webp";
+import scriptTwo from "../../public/notches-placeholder.webp";
+import scriptThree from "../../public/notches-placeholder.webp";
 ---
 
 <div id="actors" class="py-16 lg:py-48">
@@ -11,13 +11,15 @@ import vaNameThree from "../../public/about-image-2.webp";
   >
     Notches on our headboard
   </h2>
-  <div class="max-w-screen-xl items-center px-2 md:flex">
+  <div class="my-16 max-w-screen-xl items-center px-2 md:flex">
     <div class="order-first p-10 sm:order-last md:w-1/2">
       <div class="relative mt-8">
         <Image
-          src={vaNameOne}
+          src={scriptOne}
           loading="eager"
-          class="align-center z-10 mx-auto w-96 rounded-3xl border-8 border-primary-500 shadow-2xl"
+          width={700}
+          height={422}
+          class="align-center z-10 mx-auto w-full rounded-3xl border-8 border-primary-500 shadow-2xl"
           alt="image of doctor so-and-so, phd"
         />
       </div>
@@ -27,7 +29,7 @@ import vaNameThree from "../../public/about-image-2.webp";
         <h2
           class="neonTextStatic logo my-4 text-3xl font-bold text-gray-600 dark:text-white sm:text-4xl"
         >
-          Person 1
+          Script 1
         </h2>
         <div class="text-justify text-gray-300">
           <p>
@@ -36,24 +38,25 @@ import vaNameThree from "../../public/about-image-2.webp";
             veniam saepe quibusdam quod iure consequuntur earum consectetur, rem
             cum animi odit iste.
           </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt
-            obcaecati dolores quis delectus, magni possimus adipisci eligendi
-            veniam saepe quibusdam quod iure consequuntur earum consectetur, rem
-            cum animi odit iste.
-          </p>
+          <ul style="list-style-image: url('/bullet.webp');">
+            <li>add some text for bullet 1</li>
+            <li>add some text for bullet 2</li>
+            <li>add some text for bullet 3</li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="max-w-screen-xl items-center pb-4 md:flex">
+  <div class="my-16 max-w-screen-xl items-center pb-4 md:flex">
     <div class="order-first p-10 sm:order-last md:w-1/2">
       <div class="relative mt-8">
         <Image
-          src={vaNameTwo}
+          src={scriptTwo}
+          width={700}
+          height={422}
           loading="eager"
-          class="align-center z-10 mx-auto w-96 rounded-3xl border-8 border-primary-500 shadow-2xl"
+          class="align-center z-10 mx-auto w-full rounded-3xl border-8 border-primary-500 shadow-2xl"
           alt="image of doctor so-and-so, phd"
         />
       </div>
@@ -63,7 +66,7 @@ import vaNameThree from "../../public/about-image-2.webp";
         <h2
           class="neonTextStatic logo my-4 text-3xl font-bold text-gray-600 dark:text-white sm:text-4xl"
         >
-          Person 2
+          Script 2
         </h2>
         <div class="text-justify text-gray-300">
           <p>
@@ -72,24 +75,25 @@ import vaNameThree from "../../public/about-image-2.webp";
             veniam saepe quibusdam quod iure consequuntur earum consectetur, rem
             cum animi odit iste.
           </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt
-            obcaecati dolores quis delectus, magni possimus adipisci eligendi
-            veniam saepe quibusdam quod iure consequuntur earum consectetur, rem
-            cum animi odit iste.
-          </p>
+          <ul style="list-style-image: url('/bullet.webp');">
+            <li>add some text for bullet 1</li>
+            <li>add some text for bullet 2</li>
+            <li>add some text for bullet 3</li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="max-w-screen-xl items-center pb-4 md:flex">
+  <div class="my-16 max-w-screen-xl items-center pb-4 md:flex">
     <div class="order-first p-10 sm:order-last md:w-1/2">
       <div class="relative mt-8">
         <Image
-          src={vaNameThree}
+          src={scriptThree}
           loading="eager"
-          class="align-center z-10 mx-auto w-96 rounded-3xl border-8 border-primary-500 shadow-2xl"
+          width={700}
+          height={422}
+          class="align-center z-10 mx-auto w-full rounded-3xl border-8 border-primary-500 shadow-2xl"
           alt="image of doctor so-and-so, phd"
         />
       </div>
@@ -99,7 +103,7 @@ import vaNameThree from "../../public/about-image-2.webp";
         <h2
           class="neonTextStatic logo my-4 text-3xl font-bold text-gray-600 dark:text-white sm:text-4xl"
         >
-          Person 3
+          Script 3
         </h2>
         <div class="text-justify text-gray-300">
           <p>
@@ -108,12 +112,11 @@ import vaNameThree from "../../public/about-image-2.webp";
             veniam saepe quibusdam quod iure consequuntur earum consectetur, rem
             cum animi odit iste.
           </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt
-            obcaecati dolores quis delectus, magni possimus adipisci eligendi
-            veniam saepe quibusdam quod iure consequuntur earum consectetur, rem
-            cum animi odit iste.
-          </p>
+          <ul style="list-style-image: url('/bullet.webp');">
+            <li>add some text for bullet 1</li>
+            <li>add some text for bullet 2</li>
+            <li>add some text for bullet 3</li>
+          </ul>
         </div>
       </div>
     </div>
